@@ -12,6 +12,7 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 w-full z-50 bg-black/50 backdrop-blur-md border-b border-orange-400 shadow-lg shadow-cyan-400/20">
       <div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+        {/* Logo */}
         <Link href="/" onClick={closeMenu}>
           <div className="flex items-center space-x-2 cursor-pointer">
             <Image
@@ -27,7 +28,7 @@ export default function Navbar() {
           </div>
         </Link>
 
-        {/* Desktop menu */}
+        {/* Desktop Menu */}
         <div className="space-x-4 hidden md:flex">
           <Link href="/" className="hover:text-orange-400 transition">Home</Link>
           <Link href="/about" className="hover:text-orange-400 transition">About</Link>
@@ -42,7 +43,7 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* Mobile icon */}
+        {/* Mobile Toggle Icon */}
         <div className="md:hidden">
           <button onClick={toggleMenu} className="text-orange-400">
             {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -50,7 +51,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile menu panel */}
+      {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden px-4 pb-4 space-y-2 text-center bg-black/90 backdrop-blur">
           <Link href="/" onClick={closeMenu} className="block text-orange-300 hover:text-white">Home</Link>
