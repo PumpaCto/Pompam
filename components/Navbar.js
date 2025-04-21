@@ -43,7 +43,7 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* Mobile Toggle Icon */}
+        {/* Mobile Toggle */}
         <div className="md:hidden">
           <button onClick={toggleMenu} className="text-orange-400">
             {isOpen ? <X size={28} /> : <Menu size={28} />}
