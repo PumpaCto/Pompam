@@ -1,3 +1,5 @@
+import Head from 'next/head';
+
 export default function Roadmap() {
   const steps = [
     {
@@ -23,23 +25,30 @@ export default function Roadmap() {
   ];
 
   return (
-    <section className="min-h-screen bg-black text-white px-4 pt-32 pb-20 animate-fade">
-      <div className="max-w-5xl mx-auto">
-        <h1 className="text-4xl font-bold text-orange-400 text-center mb-12 glow-text">
-          Roadmap
-        </h1>
+    <>
+      <Head>
+        <title>Pumpa Token Roadmap</title>
+        <meta name="description" content="Explore Pumpa Token’s roadmap from token launch to NFT gaming, anime, and community expansion." />
+      </Head>
 
-        <div className="space-y-10">
-          {steps.map((step, index) => (
-            <div key={index} className="border-l-4 border-orange-500 pl-6 relative group">
-              <div className="absolute left-[-10px] top-1 w-4 h-4 bg-orange-500 rounded-full animate-pulse" />
-              <h2 className="text-2xl font-semibold text-pumpaCyan">{step.quarter}</h2>
-              <h3 className="text-xl font-bold mt-1 mb-1 text-orange-300">{step.title}</h3>
-              <p className="text-gray-400">{step.desc}</p>
-            </div>
-          ))}
+      <section className="min-h-screen bg-black text-white px-4 pt-32 pb-20 animate-fade">
+        <div className="max-w-5xl mx-auto">
+          <h1 className="text-4xl font-bold text-orange-400 text-center mb-12 glow-text">
+            Roadmap
+          </h1>
+
+          <div className="space-y-10">
+            {steps.map((step, index) => (
+              <div key={index} className="border-l-4 border-orange-500 pl-6 relative group">
+                <div className="absolute left-[-10px] top-1 w-4 h-4 bg-orange-500 rounded-full animate-pulse" />
+                <h2 className="text-2xl font-semibold text-pumpaCyan">{step.quarter}</h2>
+                <h3 className="text-xl font-bold mt-1 mb-1 text-orange-300">{step.title}</h3>
+                <p className="text-gray-400">{step.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
