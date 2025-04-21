@@ -1,26 +1,32 @@
 import Image from 'next/image';
-import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-gray-400 py-10 border-t border-orange-500">
-      <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
-        {/* Logo + Slogan */}
-        <div className="flex items-center space-x-3">
-          <Image src="/pumpa-logo.png" width={40} height={40} alt="Pumpa Logo" className="rounded-full" />
-          <span className="text-orange-400 font-bold text-lg">Pumpa Token</span>
+    <footer className="bg-black border-t border-orange-500 text-gray-300 py-10 mt-20">
+      <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+        {/* Logo + Brand */}
+        <div className="flex items-center gap-3">
+          <Image src="/pumpa-logo.png" alt="Pumpa Logo" width={40} height={40} className="rounded-full" />
+          <span className="text-orange-400 font-bold text-xl glow-text">Pumpa Token</span>
         </div>
 
         {/* Social Icons */}
-        <div className="flex space-x-6 text-xl">
-          <a href="https://t.me/pumpatoken" target="_blank" className="hover:text-white">Telegram</a>
-          <a href="https://x.com/Pumpa_Cto" target="_blank" className="hover:text-white">Twitter</a>
-          <a href="https://www.tiktok.com/@pumpa.token" target="_blank" className="hover:text-white">TikTok</a>
+        <div className="flex gap-6">
+          <a href="https://t.me/pumpatoken" target="_blank" rel="noopener noreferrer">
+            <Image src="/icon-telegram.svg" alt="Telegram" width={24} height={24} />
+          </a>
+          <a href="https://x.com/Pumpa_Cto" target="_blank" rel="noopener noreferrer">
+            <Image src="/icon-twitter.svg" alt="Twitter" width={24} height={24} />
+          </a>
+          <a href="https://www.tiktok.com/@pumpa.token" target="_blank" rel="noopener noreferrer">
+            <Image src="/icon-tiktok.svg" alt="TikTok" width={24} height={24} />
+          </a>
         </div>
       </div>
 
-      <div className="text-center text-sm mt-8 text-gray-600">
-        ©2025 Pumpa Token. All rights reserved.
+      {/* Copyright */}
+      <div className="mt-8 text-center text-sm text-gray-500">
+        © 2025 Pumpa Token. All rights reserved.
       </div>
     </footer>
   );
