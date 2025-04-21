@@ -2,26 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-/* --------------------
-   Custom Global Styles
---------------------- */
-
-/* Neon Glow Text */
-.glow-text {
-  text-shadow:
-    0 0 6px #FFA500,
-    0 0 10px #FFA500,
-    0 0 12px #00FFFF;
+/* Global font and background */
+body {
+  @apply bg-black text-white font-sans;
 }
 
-/* Smooth transitions */
+/* Neon glow text */
+.glow-text {
+  text-shadow:
+    0 0 5px #f97316,
+    0 0 10px #f97316,
+    0 0 15px #22d3ee;
+}
+
+/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Background gradient support (if needed later) */
-body {
-  background-color: #0d0d0d;
-  color: white;
-  font-family: 'Inter', sans-serif;
+/* Scrollbar styling (optional) */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #f97316;
+  border-radius: 10px;
 }
